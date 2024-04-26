@@ -1,0 +1,12 @@
+---
+apiVersion: handlers/v1
+kind: HttpClient
+metadata:
+  name: "slot_generator"
+  namespace: "emb_dev"
+  labels:
+    foo: "bar"
+spec:
+  ref: "kafka_servers"
+  url: "https://ifconfig.me/"
+  command: "/all.json"

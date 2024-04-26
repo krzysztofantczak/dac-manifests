@@ -1,0 +1,43 @@
+---
+apiVersion: handlers/v1
+kind: Patching
+metadata:
+  name: "kafka_monthly"
+  namespace: "emb_dev"
+  labels:
+    foo: "bar"
+spec:
+  ref: "kafka_servers"
+  startWeek: 4                 # Start week of the month for generating patching slots
+  endWeek: 4                   # End week of the month for generating patching slots
+#  days: [ 1, 2, 3, 4, 5, 6, 7 ]
+  days:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+  - Sunday
+  startHour: "10:00"
+  endHour: "23:00"
+  timeInterval: 6              # Interval between consecutive patching slots in hours
+
+---
+apiVersion: configs/v1
+kind: Server
+metadata:
+  name: "kafka_servers"
+  namespace: "emb_test"
+  labels:
+    foo: "bar"
+spec:
+  ref: "kafka_monthly"
+#  ref:
+#    kind: Patching
+#    name: "kafka_monthly"
+  server_list:
+    - ap-emb01s
+    - ap-emb02s
+    - ap-emb03s
+    - ap-emb04s

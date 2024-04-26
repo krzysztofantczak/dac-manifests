@@ -1,0 +1,32 @@
+slot_generator_configs:
+#  - label: "prod_kafka_monthly_slots"
+#    start_week: 3                 # Start week of the month for generating patching slots
+#    end_week: 4                   # End week of the month for generating patching slots
+#    days:
+#      - Monday
+#      - Tuesday
+#      - Wednesday
+#      - Thursday
+#      - Friday
+##      - Saturday
+#      - Sunday
+#    hours_start: "10:00"
+#    hours_end: "23:00"
+#
+#    slot_interval: 3              # Interval between consecutive patching slots in hours
+
+  - label: "test_kafka_monthly_slots"
+    start_week: 4                 # Start week of the month for generating patching slots
+    end_week: 4                   # End week of the month for generating patching slots
+    days:
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+      - Sunday
+    hours_start: "10:00"
+    hours_end: "23:00"
+
+    slot_interval: 6              # Interval between consecutive patching slots in hours

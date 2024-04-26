@@ -1,0 +1,6 @@
+kind: STRING
+metadata:
+  name: STRING
+  labels: {}
+  annotations: {}
+spec: {}

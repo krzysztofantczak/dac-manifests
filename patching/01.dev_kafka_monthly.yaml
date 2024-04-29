@@ -37,7 +37,7 @@ spec:
 #    kind: Patching
 #    name: "kafka_monthly"
   server_list:
-    - ap-emb01s
-    - ap-emb02s
-    - ap-emb03s
-    - ap-emb04s
+    - ap-dac01s
+    - ap-dac02s
+    - ap-dac03s
+    - ap-dac04s

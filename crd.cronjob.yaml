@@ -1,0 +1,21 @@
+apiVersion: apiextensions.r3d.sh/v1
+kind: CustomResourceDefinition
+metadata:
+  name: cronjobs.dac.r3d.sh
+spec:
+  group: dac.r3d.sh
+  versions:
+  - name: v1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+          type: object
+          properties:
+  scope: Namespaced
+  names:
+    plural: cronjobs
+    singular: cronjob
+    kind: CronJob
+    shortNames:
+    - cj
